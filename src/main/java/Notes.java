@@ -1,62 +1,58 @@
-/**
-	* File: Lesson 1.6 - Booleans
-	* Author: Mr. Kalisz
-	*	Date Created: February 13, 2023
-	* Date Last Modified: February 13, 2023
-	*/
+	/**
+		* File: Lesson 1.6 - Booleans
+		* Author: Mr. Kalisz
+		* Date Created: February 13, 2023
+		* Date Last Modified: February 20, 2026
+		*/
 
-class Notes {
-		public static void main(String args[]) {
-			//declaring a boolean
+	class Notes {
+			public static void main(String args[]) {
+				
+				//declaring a boolean
+				boolean bool;
 
-			boolean bool;
+				//assigning to a boolean
 
-			//Initialize the value -> assign to it
+				bool = true;
+				System.out.println(bool);
+				bool = false;
+				System.out.println(bool);
 
-			bool = true; //notice that casing matters.  Booleans must start with lower case letters in Java
-			System.out.println(bool);
-			bool = false;
-			System.out.println(bool);
+				//create booleans by using comparison
 
-			//booleans can actually be created a large variety of ways
-			//their job is to tell if something was true or false (yes or no)
+				//range of comparators - >, <, >=, <=, ==, !=
+				// >  greater than
+				// <  less than
+				// <=  less than or equal to
+				// >=  greater than or equal to
+				// ==  equal to
+				// !=  not equals to
 
-			//comparisons
+				System.out.println(5 < 6);
 
-			int num;
-			num = 6;
+				int num;
+				num = 5;
+				System.out.println(num < 6);
 
-			System.out.println(num < 5); //comparison becomes a boolean depending on the result of whether or not the comparison is correct(true) or incorrect(false)
+				System.out.println(3 + 4 < 2 * 5); //7 < 10
 
-			//range of comparators - >, <, >=, <=, ==, !=
-			// >  greater than
-			// <  less than
-			// <=  less than or equal to
-			// >=  greater than or equal to
-			// ==  equal to
-			// !=  not equals to
+				//these comparator are used only for primitive types (char, int, double, boolean)
+				//primitive data type cannot be broken down into a smaller data type
+				//a non-primtive can be broken down into another data type (Strings)
 
-			//Each is resolved before the comparison takes place
-			System.out.println(3 + 4 < 2 * 5);
-			//System.out.println(7 < 10);
+				//var.equals(value)
 
-			//these comparators are used when dealing with primitive types (char, int, double, boolean)
+				String word;
+				word = "hello";
+				System.out.println(word.equals("Hello")); //strings must be identical to get true
 
-			//for non primitives we have two other comparators to use
+				//var.compareTo(value)
 
-			//var.equals(value)
-
-			String word;
-			word = "hello";
-			System.out.println(word.equals("bye"));
-
-			//var.compareTo(value)
-
-			System.out.println(word.compareTo("zebra"));
-			System.out.println(word.compareTo("zebra") > 0);
-			//negative number - variables is earlier than the value in the alphabet
-			//0 - variable is the same as the value
-			//positive number - variable is later than the value in the alphabet 
-			
-		}
-}
+				System.out.println(word.compareTo("Zebra") < 0);  //before
+				System.out.println(word.compareTo("alpha") > 0);  //after
+				System.out.println(word.compareTo("hello") == 0);  //same
+				//negative number - variables is earlier than the value in the alphabet
+				//0 - variable is the same as the value
+				//positive number - variable is later than the value in the alphabet 
+			}
+	}
